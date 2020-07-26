@@ -67,7 +67,7 @@
 		{
 			id: 2,
 			title: "WORK",
-      link: "/WORK"
+      link: "/work"
 		}
 	];
 
@@ -80,15 +80,14 @@
 	const workBlock = css `
 		${leftP};
 		${sp96};
-    padding: 4rem 0;
+    padding: 24px 0 4rem;
 
 		${mq[1]} {
-			padding-top: 80px;
-      max-width: calc(${breakpoints[1]}px - 240px) ;
+      width: calc(100% - 180px);
 		}
 
-		${mq[1]} {
-      max-width: ${breakpoints[2]}px;
+		${mq[2]} {
+      width: ${breakpoints[2]}px;
 		}
 	`;
 
@@ -171,7 +170,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		list-style-type: none;
-		margin-top: .5rem;
+		margin: .5rem 0 0;
 
 		li {
 			background: ${Color.Gray300};
@@ -233,10 +232,6 @@
 
 				<div class={workContainer}>
 					{#each posts as post}
-						<!-- we're using the non-standard `rel=prefetch` attribute to
-								tell Sapper to load the data for the page as soon as
-								the user hovers over the link or taps it, instead of
-								waiting for the 'click' event -->
 						<a class={item} href='work/{post.slug}' rel='prefetch'>
 							<div class={itemBox}>
 

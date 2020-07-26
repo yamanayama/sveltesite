@@ -7,6 +7,9 @@
   //compornents
   import AppNavItem from "../../components/molecules/AppNavItem.svelte";
   import AppDrowerWrap from "../../components/atoms/AppDrowerWrap.svelte";
+  import Twitter from "../../../static/svg/icon_twitter.svg";
+  import Github from "../../../static/svg/icon_github.svg";
+  import Instagram from "../../../static/svg/icon_insta.svg";
 
   //variables
   export let segment;
@@ -45,6 +48,7 @@
 
   const list = css`
     list-style-type: none;
+    margin-left: 0;
   `;
 
   const drawer = css`
@@ -72,6 +76,15 @@
       margin-top: 32%;
     }
   `;
+
+  const sns = css`
+    display: flex;
+
+    a {
+      margin-right: 8px;
+      text-decolation: none;
+    }
+  `;
 </script>
 
 <nav class={nav}>
@@ -87,5 +100,10 @@
       <AppNavItem {segment} type="blog" value="" />
       <AppNavItem {segment} type="contact" value="" />
     </ul>
+    <div class={sns}>
+      <a href="https://twitter.com/yamanayama" taregt="_blank" rel="noopener noreferrer"><Twitter width="16" /></a>
+      <a href="https://github.com/yamanayama/" target="_blank" rel="noopener noreferrer"><Github width="16" /></a>
+      <a href="https://www.instagram.com/hello.noel.the.cat/" target="_blank" rel="noopener noreferrer"><Instagram width="16" /></a>
+    </div>
   </div>
 </nav>

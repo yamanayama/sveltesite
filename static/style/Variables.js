@@ -13,7 +13,7 @@ export const leftP = css`
   }
 
   ${mq[2]}{
-    margin-left: 260px;
+    margin-left: 280px;
   }
 `;
 
@@ -83,7 +83,7 @@ export const secP = css`
 `;
 
 export const maxW = css`
-  max-width: 680px;
+  max-width: 740px;
 `;
 
 //SP横幅一括

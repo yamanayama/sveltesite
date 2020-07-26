@@ -16,13 +16,13 @@
     line-height: 2;
     ${Body};
     width: 100%;
-    max-width: 560px;
     height: 60px;
     padding-left: 8px;
     margin-bottom: 24px;
 
     ${mq[1]}{
       padding-left: 18px;
+      max-width: 560px;
     }
   `;
 </script>

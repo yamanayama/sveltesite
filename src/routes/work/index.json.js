@@ -6,7 +6,6 @@ const contents = JSON.stringify(posts.map(post => {
 		slug: post.slug,
 		despriction: post.despriction,
 		thum: post.thum
-
 	};
 }));
 

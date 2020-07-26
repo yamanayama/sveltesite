@@ -48,8 +48,6 @@
       justify-content: flex-end;
       align-items: start;
       position: relative;
-      max-width: ${breakpoints[2]}px;
-    }
   `;
 
   const pointBody = css`
@@ -59,6 +57,7 @@
       width: 50%;
       position: relative;
       z-index: 2;
+      margin-top: 24px;
     }
   `;
 
@@ -79,7 +78,6 @@
   `;
 
   const pointImage = css`
-    margin-top: 16px;
     width: 100%;
     height: 200px;
 

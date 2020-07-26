@@ -8,7 +8,9 @@
 
   //compornents
   import AppNavItem from "../../components/molecules/AppNavItem.svelte";
-  import AppDrower from "../../components/atoms/AppDrower.svelte";
+  import Twitter from "../../../static/svg/icon_twitter.svg";
+  import Github from "../../../static/svg/icon_github.svg";
+  import Instagram from "../../../static/svg/icon_insta.svg";
 
   //variables
   export let segment;
@@ -44,6 +46,7 @@
     text-align: center;
     line-height: 2;
     margin-top: 48px;
+    margin-left: 0;
   `;
 
   //open
@@ -147,6 +150,18 @@
     text-align: center;
     font-weight: bold;
   `;
+
+  const sns = css`
+    display: flex;
+
+    a {
+      color: ${Color.White};
+
+      &:not(:last-of-type){
+        margin-right: 16px;
+      }
+    }
+  `;
 </script>
 
 <button class={drawer} for="header-switch" on:click={() => (open = !open)}>
@@ -173,6 +188,11 @@
           <AppNavItem {segment} type="blog" value=""/>
           <AppNavItem {segment} type="contact" value=""/>
         </ul>
+      </div>
+      <div class={sns}>
+        <a href="https://twitter.com/yamanayama" taregt="_blank" rel="noopener noreferrer"><Twitter width="32" height="32" /></a>
+        <a href="https://github.com/yamanayama/" target="_blank" rel="noopener noreferrer"><Github width="32" height="32" /></a>
+        <a href="https://www.instagram.com/hello.noel.the.cat/" target="_blank" rel="noopener noreferrer"><Instagram width="32" height="32" /></a>
       </div>
     </div>
 

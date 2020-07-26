@@ -81,7 +81,6 @@
 </style>
 
 <li class={current}>
-
   <a
     class={link}
     rel="prefetch"

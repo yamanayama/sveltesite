@@ -18,7 +18,6 @@
     line-height: 2;
     ${Body};
     width: 100%;
-    max-width: 560px;
     height: 80px;
     margin-bottom: 24px;
     padding: 8px;
@@ -26,6 +25,7 @@
     ${mq[1]}{
       height: 120px;
       padding: 18px;
+      max-width: 560px;
     }
 
   `;

@@ -4,7 +4,7 @@
   import { css, keyframes } from "emotion";
   import Color from "../../static/style/Color.js";
   import { mq, rem, breakpoints } from "../../static/style/Base.js";
-  import { center, secP, sp96, leftP } from "../../static/style/Variables.js";
+  import { center, secP, sp96, leftP, maxW } from "../../static/style/Variables.js";
   import { display1, display2,mainHeading,subHeading,Body } from "../../static/style/Title.js";
 
   //compornents
@@ -32,7 +32,7 @@
       despriction: "村上 奈緒美 WEB/UIデザイナー",
       body:
 				`<p>一般職、ゲームイラストレーターを経てWEB業界へきました。<br>
-				受託制作会社でWEBデザイナー・コーダー・ディレクター兼任後、インハウスのデザイナーとして働いています。</p><p>普段はGAなどのデータ分析をもとに、WEBサービスのUI開発でLPOやABテストを行うことで、PDCAを回しています。</p><p>マークアップ（CSS,アニメーション）が得意で、趣味はフロンエンドの個人開発とマインクラフトの整地です。Vue(Nuxt),Reactは雰囲気を察します。</p><p>画像は村上家の居候のノエル（猫）です。サイト名もこちらから。</p>`
+				受託制作会社でWEBデザイナー・コーダー・ディレクター兼任後、インハウスのデザイナーとして働いています。</p><p>普段はGAなどのデータ分析をもとに、WEBサービスのUI開発でLPOやABテストを行うことで、PDCAを回しています。</p><p>マークアップ（CSS,アニメーション）が得意で、趣味はフロンエンドの個人開発とマインクラフトの整地です。Vue(Nuxt),Reactは雰囲気を察します。</p><p>画像は村上家の居候のノエル（猫）です。サイト名もこちらから。</p><p>よければこちらの<a href="https://www.figma.com/proto/HNKTD2XKuxknDurvbEbBNK/200507_optimind_murakami?node-id=1%3A84&scaling=min-zoom" target="_blank" rel="noopener noreferrer">自己紹介スライド</a>もどうぞ</p>`
     }
 	];
 	let careerTitle = "2020年";
@@ -90,8 +90,13 @@
 		padding: 24px 0 0;
 
 		${mq[1]} {
-			padding-top: 80px;
-      max-width: ${breakpoints[1]}px;
+			width: calc(100% - 180px);
+			${rem(14)};
+		}
+
+		${mq[2]} {
+			width: 100%;
+			${maxW}
 		}
 
 		p {
@@ -107,29 +112,23 @@
 		margin-bottom: 32px;
 
 		${mq[1]} {
-			max-width: ${breakpoints[1]}px;
 			margin-bottom: 40px;
 		}
 	`;
 
 	const aboutBox = css `
-		background: ${Color.White};
-		padding: 16px 24px;
-
-		${mq[1]} {
-			max-width: ${breakpoints[1]}px;
-			padding: 48px 56px;
-			${rem(14)};
-		}
 	`;
 
 	const aboutBoxSub = css `
 		padding: 16px 0 0;
 
-		${mq[1]} {
-			max-width: ${breakpoints[2]}px;
+		${mq[1]}
 			padding: 48px 0 0;
 			${rem(14)};
+		}
+
+		${mq[2]} {
+			width: ${breakpoints[2]}px;
 		}
 	`;
 
@@ -162,12 +161,16 @@
 
 		${mq[1]} {
 			padding-top: 80px;
-      max-width: ${breakpoints[1]}px;
+			width: calc(100% - 180px);
+		}
+
+		${mq[2]} {
+			width: ${breakpoints[2]}px;
 		}
 	`;
 
 	const careerBlock = css`
-		margin-top: 24px;
+		margin-top: 8px;
 	`;
 
 	const careerList = css`
@@ -196,8 +199,8 @@
 			<h1 class={display2}>about</h1>
 			<section class={aboutBox}>
 				<h2 class={display1}>portfolio with svelte</h2>
-				<p>こちらは村上奈緒美のポートフォリオ（仮）です。Svelte（Sapper）+ Netlifyです。(contentfulはAPI連携がどうにも🙅‍♀️だったので、違うJAMStackで試してみようかな・・<br>アニメーション、ライフサイクル、storeなど一通りさわっています。<br>
-				Githubは<a href="" target="_blank" rel="noopener noreferrer">こちら</a></p>
+				<p>こちらは村上奈緒美のポートフォリオです。Svelte（Sapper）+ Netlifyです。(contentfulはAPI連携がどうにも🙅‍♀️だったので、違うJAMStackで試してみようかな・・<br>アニメーション、ライフサイクル、storeなど一通りさわっています。<br>
+				Githubは<a href="https://github.com/yamanayama/sveltesite" target="_blank" rel="noopener noreferrer">こちら</a></p>
 				<h3 class={subHeading}>使った技術一通り</h3>
 				<ul>
 					<li>Svelte(Sapper)</li>
@@ -233,8 +236,6 @@
 			</section>
 		</section>
 	</div>
-
-
 
 	<AppBreadcrumbs {breds} />
 </div>

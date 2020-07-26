@@ -7,7 +7,6 @@
   import { display1, display2, mainHeading, Body } from "../../static/style/Title.js";
 
   //compornents
-  // import AppTitle from "../components/atoms/itle.svelte";
   import Meta from './Meta.svelte'
   import AppTwoColumnWide from "../components/organisms/AppTwoColumnWide.svelte";
   import AppSlide from "../components/organisms/AppSlide.svelte";
@@ -46,7 +45,7 @@
       img: "../images/top/point_img03.jpg",
       title: "marketing",
       despriction: "marketing",
-      body: "GAなどの解析"
+      body: "GAなどの定量分析をもとに、仮説思考でプロダクト改善や企画立案を行います。デザインをただ作るだけでなく、「数値でデザインを語る」ことができるよう、KPIとCV,CVRを重視しています。"
     }
   ];
 
@@ -60,14 +59,14 @@
     },
     {
       id: Math.random(),
-      link: "",
+      link: "/work/himari",
       img: "../images/works/works_thum02.jpg",
       title: "himari",
       despriction: "サイト改善"
     },
     {
       id: Math.random(),
-      link: "",
+      link: "/work/heartsite",
       img: "../images/works/works_thum03.jpg",
       title: "児童デイサービス ハートシップ",
       despriction: "WEBサイト（コーディング）"
@@ -98,29 +97,16 @@
   `;
 
   const heroImg = css`
-    width: 72vmin;
-    height: 120vmin;
-    border: 4px solid ${Color.White};
-    margin: auto;
-    ${center("xy")};
 
-    ${mq[1]} {
-      width: 40vmin;
-      height: 68vmin;
-    }
   `;
 
   const heroBody = css`
-    text-align: left;
-    position: absolute;
-    left: 1rem;
-    bottom: 1rem;
+
     ${rem(10)};
     font-family: ${Color.FontFamilyEng100};
 
     ${mq[1]} {
-      left: -12vmin;
-      bottom: -2rem;
+
     }
   `;
 
@@ -168,7 +154,7 @@
 
     &::before {
       content: "portfolio";
-      font-family:  ${Color.FontFamilyEng100};
+      font-family: ${Color.FontFamilyEng100};
       position: absolute;
       top: -8px;
       right: 0;
@@ -319,6 +305,7 @@
 
 <Meta {metadata}/>
 
+{#if false}
 <div class={hero}>
   <div class={heroImg}>
     <p class={heroBody}>
@@ -333,6 +320,7 @@
   </div>
   <div class={scroll}>scroll</div>
 </div>
+{/if}
 
 <div class={vision}>
   <div class={visionCopy}>
@@ -342,18 +330,17 @@
   </div>
   <section class="visionBlock">
     <h2 class={visionTitle}>
-      サービスと技術を繋ぐ
+      サービスの価値を届ける
       <br />
       ヒトとモノを繋ぐ
     </h2>
     <div class={visionBody}>
-      <p>aaaaaaaaaaaaaaaaaa</p>
-      <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <p>
-        aaaaaaaaaaaaaaaaaaaaaaaab
-        <br />
-        aaaaaaaaaaaa
-      </p>
+      <p>ユーザーは「困ったな」があるからこそ、私たちのサービスを必要とし、課題を解決することでサービスが成長します。</p>
+
+      <p>そしてユーザーの抱える課題は、すでに顕在化しているとも限りません。私たちはチームで協力しながら、ユーザーの潜在的な「困った」まで可視化し、解決する必要があります。</p>
+
+      <p>現在、そして未来で、私たちのサービスを必要とするユーザーへ、最高のサービスと体験価値を届け続けたいです。</p>
+      <p>っていうそれっぽいことを話しています。</p>
     </div>
   </section>
 </div>

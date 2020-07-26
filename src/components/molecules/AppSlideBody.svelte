@@ -3,7 +3,7 @@
   import { css, keyframes } from "emotion";
   import Color from "../../../static/style/Color.js";
   import { mq, rem, breakpoints } from "../../../static/style/Base.js";
-  import { mainHeading,Body } from "../../../static/style/Title.js";
+  import { subHeading, Body } from "../../../static/style/Title.js";
 
   //compornents
 
@@ -54,17 +54,16 @@
 
   const itemTitle = css`
     order: 2;
-    ${mainHeading}
+    ${subHeading}
   `;
 
 </script>
 
-<section class={itemBlock}>
+<div class={itemBlock}>
   <a class={itemBox} href={link}>
     <h3 class={itemTitle} >{title}</h3>
     <figure class={itemImg}>
       <img src={img} alt={title}>
     </figure>
-    <div class={itemText}>{despriction}</div>
   </a>
-</section>
+</div>

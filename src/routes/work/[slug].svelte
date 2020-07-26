@@ -3,15 +3,14 @@
   import { css, keyframes } from "emotion";
   import Color from "../../../static/style/Color.js";
   import { mq, rem, breakpoints } from "../../../static/style/Base.js";
-  import { center, secP, sp96, leftP } from "../../../static/style/Variables.js";
-  import { display1, display2,mainHeading } from "../../../static/style/Title.js";
+  import { center, secP, sp96, leftP, maxW } from "../../../static/style/Variables.js";
+  import { display1, display2, mainHeading, Body } from "../../../static/style/Title.js";
 
 	//compornents
 	import AppBreadcrumbs from "../../components/molecules/AppBreadcrumbs.svelte";
+	import AppCvButton from "../../components/atoms/AppCvButton.svelte";
 
 	export async function preload({ params, query }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
 		const res = await this.fetch(`work/${params.slug}.json`);
 		const data = await res.json();
 
@@ -35,7 +34,7 @@
 		{
 			id: 2,
 			title: "WORK",
-      link: "/WORK"
+      link: "/work"
 		},
 		{
 			id: 3,
@@ -48,29 +47,22 @@
 	//style
 	const work = css `
 		background: ${Color.Gray200};
-		${rem(13)};
-
-		${mq[1]} {
-			${rem(14)};
-		}
 	`;
 
 	const workBlock = css `
-		padding-top: 80px;
+		padding-top: 24px;
+		${Body};
 
 		${mq[1]} {
-			margin-left: 180px;
 			padding-top: 24%;
-		}
-
-		${mq[2]} {
-			margin-left: 240px;
 		}
 	`;
 
 	const workTitle = css `
 		${display2};
 		${leftP};
+		margin: 0 auto 1rem;
+    width: 96%;
 
 		${mq[1]} {
       display: none;
@@ -81,8 +73,17 @@
 		background: ${Color.White};
 		position: relative;
 		z-index: 2;
+		margin-bottom: 40px;
+		${leftP};
 
 		${mq[1]} {
+			width: calc(100% - 180px);
+		}
+
+		${mq[2]} {
+			width: 100%;
+			${maxW}
+			margin-bottom: 80px;
 		}
 	`;
 
@@ -111,16 +112,12 @@
 
 		${mq[1]} {
 			padding: 4rem;
-			max-width: ${breakpoints[2]}px;
 		}
 	`;
 
 	const workTime = css `
 		font-weight: bold;
-		color: ${Color.Gray500};
-
-		${mq[1]} {
-		}
+		color: ${Color.Gray400};
 	`;
 
 	const workText = css `
@@ -131,20 +128,19 @@
 		}
 	`;
 
-
 	const itemTitle = css `
 		${display1};
+	`;
+
+	const back = css `
+		margin: 16px auto 24px;
 
 		${mq[1]} {
+			margin: 24px auto 32px;
 		}
 	`;
 
-
 </script>
-
-<style>
-
-</style>
 
 <svelte:head>
 	<title>{post.title} | murakami naomi's portfolio site</title>
@@ -156,14 +152,17 @@
 		<div class={workBox}>
 			<div class={workBody}>
 				<h1 class={itemTitle}>{post.title}</h1>
-				<time class={workTime}>リリース:{post.time}</time>
+				<time class={workTime}>RELEASE : {post.time}</time>
 				<div class={workText}>
 					{@html post.html}
 				</div>
 
 			</div>
 		</div>
-
 	</div>
+	<div class={back}>
+	  <AppCvButton type="button" areaLabel="BACK" className="secondary" onClick="history.back()" />
+	</div>
+
 	<AppBreadcrumbs {breds} />
 </div>

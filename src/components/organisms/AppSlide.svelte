@@ -20,5 +20,7 @@
 
 <div class={slideBlock}>
   <AppSlideBlock {works} />
+  {#if false}
   <AppSlideButton />
+  {/if}
 </div>

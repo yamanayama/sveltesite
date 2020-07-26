@@ -86,7 +86,6 @@ abbr[title] {
 
 a {
   background-color: transparent; /* Remove the gray background on active links in IE 10 */
-  display: block;
   color: #222;
 }
 
@@ -306,11 +305,6 @@ svg:not([fill]) {
 /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
 [aria-disabled] {
   cursor: default;
-}
-
-::selection {
-  background: rgb(201, 201, 201);
-  color: white;
 }
 
 p {

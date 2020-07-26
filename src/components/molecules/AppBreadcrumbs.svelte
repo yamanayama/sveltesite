@@ -14,15 +14,14 @@
 
   //style
   const breadcrumbs = css `
-    margin: 40px auto 0;
     padding-bottom: 8px;
     ${sp96};
     ${leftP};
+    margin: 40px auto 0;
 
     ${mq[1]} {
       margin-top: 120px;
       width: auto;
-      max-width: ${breakpoints[2]}px;
     }
 
     ul{
@@ -30,6 +29,7 @@
       ${rem(9)};
       list-style-type: none;
       font-weight: bold;
+      margin-bottom: 0;
 
       ${mq[1]} {
         ${rem(10)};
