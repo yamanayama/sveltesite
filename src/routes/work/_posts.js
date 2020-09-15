@@ -1,41 +1,99 @@
 const posts = [{
-		title: '人工芝専門店 芝助',
-		slug: 'shibasuke',
-		time: '2019/03',
-		thum: '../../../images/works/works_thum01.jpg',
-		hero: '../../../images/works/works_hero01.jpg',
-		despriction: '<li>WEBデザイン</li><li>ロゴ制作</li><li>イラスト</li><li>ノベルティ</li>',
-		html: `
-			<h2>あとでちゃんとかく</h2>
-			<p>あとでちゃんとかく</p>
-		`
-	},
+	title: '人工芝専門店 芝助',
+	slug: 'shibasuke',
+	time: '2019/03',
+	url: 'https://www.shibasuke.jp',
+	thum: '../../../images/works/works_thum01.jpg',
+	hero: '../../../images/works/works_hero01.jpg',
+	despriction: '<li>WEBデザイン</li><li>ロゴ</li><li>イラスト</li><li>名刺</li><li>チラシ</li>',
+	html: `
+			<p>人工芝専門店である芝助様のWEBサイト・ロゴ・名刺などノベルティを制作いたしました。</p>
+			<p>デザインのオーダーは「20−30代の主婦層向け」「可愛らしい感じ」でした。そこからDIYとキッズ要素を合わせ、愛着と親しみを持てるデザインになりました。クライアントから直接ヒアリングし、ロゴのキャラクター性（しばすけ＝芝犬）など、イラスト・キャラクター制作も楽しく書かせていただきました。</p>
+		`,
+	good: `<p>女性受けの良いデザインができました。また、ディレクションとコーディングが分業していたため、デザインに集中することができました。</p>`,
+	try: `<p>制作中から修正が多く、コーディング段階での手戻りが減るよう、修正に強いデザインデータを考慮すべきでした。</p>`
+},
 
-	{
-		title: '児童デイサービス ハートシップ',
-		slug: 'heartsite',
-		time: '2018/10',
-		thum: '../../../images/works/works_thum03.jpg',
-		hero: '../../../images/works/works_hero03.jpg',
-		despriction: `<li>コーディング</li><li>WordPress</li>`,
-		html: `
-			<h2>あとでちゃんとかく</h2>
-			<p>あとでちゃんとかく</p>
-		`
-	},
+{
+	title: '児童デイサービス ハートシップ',
+	slug: 'heartship',
+	time: '2018/10',
+	url: 'https://www.kaigo-heart-ship.com/',
+	thum: '../../../images/works/works_thum03.jpg',
+	hero: '../../../images/works/works_hero03.jpg',
+	despriction: `<li>コーディング</li><li>WordPress</li>`,
+	html: `
+			<p>訪問介護や児童ケアサービスを経営するハートシップ様のコーディングを担当いたしました。子供らしい可愛いデザインにあわせ、CSSアニメーションで賑やかにしました。</p>
+			<p>今回は某ホームページ制作サービスからWordPressへの引越しを行い、200ページ以上を移管しました。SEO効果を引き継げるようURLをリダイレクトしつつ、一部手動で移管作業を行なったのは良い思い出です。</p>
+		`,
+	good: `<p>CSSアニメーションを用い、デザインに合わせた動きのあるサイトを作りました。</p>`,
+	try: `<p>DNSと記事の移管作業を考慮してスケジュールを組むこと。</p>`
+},
 
-	{
-		title: 'ヒマリ',
-		slug: 'himari',
-		time: '2019/06 〜',
-		thum: '../../../images/works/works_thum02.jpg',
-		hero: '../../../images/works/works_hero02.jpg',
-		despriction: `<li>ワイヤー制作</li><li>UI設計</li><li>ユーザーインタビュー</li><li>LPO</li>`,
-		html: `
+{
+	title: 'マル幸農園',
+	slug: 'marukou',
+	time: '2018/10 〜',
+	url: 'http://www.marukou-nouen.jp/',
+	thum: '../../../images/works/works_thum05.jpg',
+	hero: '../../../images/works/works_hero05.jpg',
+	despriction: `<li>ディレクション</li><li>ワイヤー制作</li><li>WEBデザイン</li><li>コーディング</li><li>WordPress</li>`,
+	html: `
+			<p>岐阜の梨農園のマル幸農園様のWEBサイトを制作いたしました。</p>
+			<p>初めてのディレクションを担当し、ヒアリングから企画制作、デザイン・コーディングーリリースまで一気通貫で行いました。短納期ながら、お客様のご要望をヒアリングしつつ、WEBサイトやブログの説明をさせていただき、ブログ記事のSEO効果を実感していただきました。</p>
+		`,
+	good: `<p>初めてのディレクションにトライ。スケジューリング、外部折衝能力が身につきました。</p>`,
+	try: `<p>短納期、クオリティコントロールを身につけます。</p>`
+},
+
+{
+	title: 'あかり薬局',
+	slug: 'akari',
+	time: '2018/09 〜',
+	url: 'https://www.flagx.jp/',
+	thum: '../../../images/works/works_thum04.jpg',
+	hero: '../../../images/works/works_hero04.jpg',
+	despriction: `<li>ディレクション</li><li>ワイヤー制作</li><li>WEBデザイン</li><li>コーディング</li><li>WordPress</li>`,
+	html: `
+			<p>名古屋市小牧の調剤薬局、あかり薬局様のWEBサイトを制作いたしました。</p>
+			<p>ヒアリングから企画制作、デザイン・コーディングーリリースまで一気通貫で行いました。シングルページ＋アルファのため、デザインで装飾を増やし、サイトの質がよく見えるよう工夫しました。</p>
+			<p>「アットホーム」「柔らかく寄り添う」「あかり」というキーワードを元に、メインターゲットである40代以降の男女にも受け入れやすいような、あたたかみのあるホームページを制作しました。</p>
+		`,
+	good: `<p>SNSの運用を積極的にされていたので、ページ上部や下部に埋め込みで表示しています。</p>`,
+	try: `<p>ユーザーとして使いやすさ、見やすさを考慮していきます。</p>`
+},
+
+{
+	title: '社内イベントLT大会　LPサイト',
+	slug: '2020ltfes',
+	time: '2020/09 〜',
+	url: '',
+	thum: '../../../images/works/works_thum06.jpg',
+	hero: '../../../images/works/works_hero06.jpg',
+	despriction: `<li>ロゴ</li><li>ワイヤー制作</li><li>WEBデザイン</li><li>vue</li>`,
+	html: `
+			<p>あとでちゃんとかく</p>
+		`,
+	good: `<p>女性受けの良いデザインができました。また、ディレクションとコーディングが分業していたため、デザインに集中することができました。</p>`,
+	try: `<p>制作中から修正が多く、コーディング段階での手戻りが減るよう、修正に強いデザインデータを考慮すべきでした。</p>`
+},
+
+
+{
+	title: 'ヒマリ',
+	slug: 'himari',
+	time: '2019/06 〜',
+	url: '',
+	thum: '../../../images/works/works_thum02.jpg',
+	hero: '../../../images/works/works_hero02.jpg',
+	despriction: `<li>ワイヤー制作</li><li>UI設計</li><li>ユーザーインタビュー</li><li>LPO</li>`,
+	html: `
 			<h2>あとでちゃんとかく</h2>
 			<p>あとでちゃんとかく</p>
-		`
-	}
+		`,
+	good: `<p>女性受けの良いデザインができました。また、ディレクションとコーディングが分業していたため、デザインに集中することができました。</p>`,
+	try: `<p>制作中から修正が多く、コーディング段階での手戻りが減るよう、修正に強いデザインデータを考慮すべきでした。</p>`
+}
 
 	// {
 	// 	title: '芝助 名刺制作',
